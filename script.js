@@ -8,6 +8,10 @@ snake[0] = {
 }
 
 let direction = "right"; //direção da cobrinha
+let food = {
+  x: Math.floor(math.random() * 15 + 1) * box, //comidinha, para fazer aparecer em vários lugares o random retorna numeros aleatórios. colocou * box para delimitar onde ela vai aparecer
+  y: math.floor(math.random() * 15 + 1) * box
+}
 
 function criarBG() {
   context.fillStyle = "lightgreen"; //Estilo do canva, do contexto
@@ -19,6 +23,11 @@ function criarCobrinha(){
     context.fillStyle = "blue"
     context.fillRect(snake[i].x, snake[i].y, box, box); //tamanho da cobrinha e dos quadradinhos
   }
+}
+
+function drawFood(){
+  context.fillStyle = "red";
+  context.fillRect(food.x, foo.y, box, box);
 }
 
 document.addEventListener('keydown', update);
@@ -38,6 +47,7 @@ function iniciarjogo(){
 
   criarBG();
   criarCobrinha();
+  drawFood();
 
   let snakeX = snake[0].x; //posição da cobrinha quando executar os movimentos.
   let snakeY = snake[0].y;
