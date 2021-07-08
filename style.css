@@ -1,3 +1,20 @@
 body {
-  
+  height: 95vh;
+  width: 95;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+}
+
+h1 {
+  color: #ffffff;
+  background-color: blue;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 20%;  
+}
+
+canvas {
+  border-radius: 10%;
 }
